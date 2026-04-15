@@ -1415,8 +1415,8 @@ end
 local KillAuraSection = createSection("KillAura", 1)
 KillAuraSection.Size = UDim2.new(0.94, 0, 0, 170)
 createToggle("KillAura Enabled", KillAuraSection, function(state) KillAuraEnabled = state if state then startKillAura() else stopKillAura() end end, 1, "KillAura")
-local _, setKARange = createSlider("KillAura Range", 5, 50, 20, KillAuraSection, function(v) KillAuraRange = v end, 2)
-local _, setAPS = createSlider("Attacks/s", 1, 3000, 15, KillAuraSection, function(v) AttacksPerSecond = v end, 3)
+local _, setKARange = createSlider("KillAura Range", 5, 50, 50, KillAuraSection, function(v) KillAuraRange = v end, 2)
+local _, setAPS = createSlider("Attacks/s", 1, 3000, 3000, KillAuraSection, function(v) AttacksPerSecond = v end, 3)
 SliderSetters["KillAuraRange"] = setKARange
 SliderSetters["AttacksPerSecond"] = setAPS
 
